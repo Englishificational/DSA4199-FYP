@@ -2,5 +2,7 @@
  My DSA4199 FYP
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![test](https://user-images.githubusercontent.com/65672421/222119945-b3fc3371-93b1-41bf-b245-c51ca8eccd4a.mp4)  |  ![test2](https://user-images.githubusercontent.com/65672421/222120029-ae59015e-6424-4c06-9514-1a57edfe976a.mp4)
+![test](![halfcheetah-bad](https://user-images.githubusercontent.com/65672421/222123494-e20353be-ffff-412d-bb24-ee108ab59a13.gif)
+)  |  ![test2]![halfcheetah-good](https://user-images.githubusercontent.com/65672421/222123513-bdb72a42-c7df-459d-aa8c-43981fc07277.gif)
+
 
