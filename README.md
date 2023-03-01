@@ -1,5 +1,5 @@
 # DSA4199-FYP
- Additional optimizers in DSA4199-FYP/Reinforcement Learning/ have to be manually added to pytorch's torch/optim/  
+ Additional optimizers in ```DSA4199-FYP/Reinforcement Learning/``` have to be manually added to pytorch's ```torch/optim/```  
  Below are some examples of good and bad performance.  
 $f(x)=arctan(x), \alpha=\frac{1}{100}$ | $f(x)=arctan(x), \alpha=\frac{1}{10,000}$
 :-------------------------:|:-------------------------:
