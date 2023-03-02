@@ -22,8 +22,8 @@ SGLD | SGLMLD, maximizing adversary only, $f(x)=x^2, \alpha=\frac{1}{10,000}$
 Hops forward but falls down | Hops forward for longer before falling
 
 
- ## HalfCHeetah
-SGLMLD, min actor ($f(x)=x,\alpha=\frac{1}{100,000}$),<br/> max adversary ($f(x)=x,\alpha=1$) | SGLMLD, min actor ($f(x)=x,\alpha=\frac{1}{100,000}$)<br/>, max adversary ($f(x)=x,\alpha=\frac{1}{100,000}$)
+ ## HalfCheetah
+SGLMLD,<br/> min actor ($f(x)=x,\alpha=\frac{1}{100,000}$),<br/> max adversary ($f(x)=x,\alpha=1$) | SGLMLD,<br/> min actor ($f(x)=x,\alpha=\frac{1}{100,000}$)<br/>, max adversary ($f(x)=x,\alpha=\frac{1}{100,000}$)
 :-------------------------:|:-------------------------:
 ![halfcheetah-comb-bad](https://user-images.githubusercontent.com/65672421/222392779-80d57650-aad8-4957-bbb4-d867633cc756.gif) | ![halfcheetah-comb-good](https://user-images.githubusercontent.com/65672421/222392811-868f1f1b-2a5a-4a63-9a88-c2a676ac5d5f.gif)
 Flips over, slowly moves forward | Keeps moving forward
