@@ -15,4 +15,9 @@ Minimizing actor only, $f(x)=arctan(x), \alpha=\frac{1}{100}$ | Minimizing actor
 Flips over, stops moving forward | Keeps moving forward  
 
 
+ ## Hopper
+SGLD | SGLMLD, Maximizing actor only, $f(x)=x^2, \alpha=\frac{1}{10,000}$
+:-------------------------:|:-------------------------:
+![Uploading hopper-bad.gif…]() | ![Uploading hopper-good.gif…]()
+Hops forward but falls down | Hops forward for longer before falling
 
