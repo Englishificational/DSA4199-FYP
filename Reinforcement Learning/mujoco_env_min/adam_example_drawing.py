@@ -51,10 +51,26 @@ ratio = 1
 epsilon = 1e-2 # i think only for SGLD?
 
 
-env_name = 'HalfCheetah-v4'
+# env_name = 'HalfCheetah-v4'
+# env = gym.make(env_name)
+# #saved_loc = os.getcwd() + '/my_test_archived/' + 'HalfCheetah-v4-arctan-c_magnitude-SGLMLD/SGLMLD_arctan_actor_c100/1' 
+# saved_loc = os.getcwd() + '/my_test_archived/' + 'HalfCheetah-v4-arctan-c_magnitude-SGLMLD/SGLMLD_arctan_actor_c10000/1' 
+
+# env_name = 'Walker2d-v4'
+# env = gym.make(env_name)
+# saved_loc = os.getcwd() + '/my_test_archived/' + 'Walker2d-v4-c_magnitude-SGLMLD/SGLD__thermal_0.01_action_noise_0.01/1' 
+# #saved_loc = os.getcwd() + '/my_test_archived/' + 'Walker2d-v4-c_magnitude-SGLMLD/SGLMLD_actor_c100000/1' 
+
+# env_name = "Hopper-v4"
+# env = gym.make(env_name)
+# #saved_loc = os.path.split(os.getcwd())[0] + '/mujoco_env_max/my_test_archived/Hopper-v4-squared-c_magnitude-SGLMLD/SGLD_thermal_0.001__action_noise_0.2/1'
+# saved_loc = os.path.split(os.getcwd())[0] + '/mujoco_env_max/my_test_archived/Hopper-v4-squared-c_magnitude-SGLMLD/SGLMLD_squared_adversary_c10000/2'
+
+
+env_name = "HalfCheetah-v4"
 env = gym.make(env_name)
-saved_loc = os.getcwd() + '/my_test_archived/' + 'HalfCheetah-v4-arctan-c_magnitude-SGLMLD/SGLMLD_arctan_actor_c100/1' 
-#saved_loc = os.getcwd() + '/my_test_archived/' + 'HalfCheetah-v4-arctan-c_magnitude-SGLMLD/SGLMLD_arctan_actor_c10000/1' 
+#saved_loc = os.path.split(os.getcwd())[0] + '/mujoco_env_specific/my_test_archived/HalfCheetah-v4-c_magnitude-SGLMLD/SGLMLD_ad_c1_act_c100000/1'
+saved_loc = os.path.split(os.getcwd())[0] + '/mujoco_env_specific/my_test_archived/HalfCheetah-v4-c_magnitude-SGLMLD_2/SGLMLD_ad_c100000_act_c100000/1'
 
 agent = DDPG(beta=beta, epsilon=epsilon, learning_rate=learning_rate, gamma=gamma, 
                 tau=tau, hidden_size_dim0=hidden_size_dim0, hidden_size_dim1=hidden_size_dim1, 
@@ -66,17 +82,20 @@ agent = DDPG(beta=beta, epsilon=epsilon, learning_rate=learning_rate, gamma=gamm
 load_model(agent, saved_loc)
 
 env.reset()
+env.seed(42)
 env.render()
 time.sleep(2)
 state = agent.Tensor([env.reset()])  
-for _ in range(400):
+for i in range(600):
+  if i % 1000 == 0:
+    print(i)
   env.render()
 
   
   action = agent.select_action(state)#, action_noise=normalnoise, mdp_type=exploration_method)
   state, reward, done, _ = env.step(action.cpu().numpy()[0])
   state = agent.Tensor([state])
-  if random.random() < 0.02: 
+  if random.random() < 0.005: 
     print("Reward:", reward)
   #agent.actor
 env.close()
