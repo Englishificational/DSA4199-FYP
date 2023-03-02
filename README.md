@@ -9,14 +9,14 @@ Stochastic Gradient Langevin Dynamics | Stochastic Gradient Landscape Modified L
 Falls over, inches itself forward | Keeps stepping forward
 
  ## HalfCheetah
-SGLMLD, minimizing actor only, $f(x)=arctan(x), \alpha=\frac{1}{100}$ | SGLMLD, minimizing actor only, $f(x)=arctan(x), \alpha=\frac{1}{10,000}$
+SGLMLD, minimizing actor only,<br/> $f(x)=arctan(x), \alpha=\frac{1}{100}$ | SGLMLD, minimizing actor only,<br/> $f(x)=arctan(x), \alpha=\frac{1}{10,000}$
 :-------------------------:|:-------------------------:
 ![halfcheetah-bad](https://user-images.githubusercontent.com/65672421/222123494-e20353be-ffff-412d-bb24-ee108ab59a13.gif) | ![halfcheetah-good](https://user-images.githubusercontent.com/65672421/222123513-bdb72a42-c7df-459d-aa8c-43981fc07277.gif)
 Flips over, stops moving forward | Keeps moving forward  
 
 
  ## Hopper
-SGLD | SGLMLD, maximizing adversary only, $f(x)=x^2, \alpha=\frac{1}{10,000}$
+SGLD | SGLMLD, maximizing adversary only,<br/> $f(x)=x^2, \alpha=\frac{1}{10,000}$
 :-------------------------:|:-------------------------:
 ![hopper-bad](https://user-images.githubusercontent.com/65672421/222380711-a0c38460-5d47-4182-9b07-35abdb17be73.gif) | ![hopper-good](https://user-images.githubusercontent.com/65672421/222380754-4539ec85-55d5-4add-9095-53640a981984.gif)
 Hops forward but falls down | Hops forward for longer before falling
