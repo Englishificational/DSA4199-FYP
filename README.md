@@ -18,6 +18,6 @@ Flips over, stops moving forward | Keeps moving forward
  ## Hopper
 SGLD | SGLMLD, Maximizing actor only, $f(x)=x^2, \alpha=\frac{1}{10,000}$
 :-------------------------:|:-------------------------:
-![Uploading hopper-bad.gif…]() | ![Uploading hopper-good.gif…]()
+![hopper-bad](https://user-images.githubusercontent.com/65672421/222380711-a0c38460-5d47-4182-9b07-35abdb17be73.gif) | ![hopper-good](https://user-images.githubusercontent.com/65672421/222380754-4539ec85-55d5-4add-9095-53640a981984.gif)
 Hops forward but falls down | Hops forward for longer before falling
 
